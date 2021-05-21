@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+  include ::ActionController::Cookies
   before_action :authorized
 
   def encode_token(payload) #{ user_id: 2 }
@@ -6,6 +7,7 @@ class ApplicationController < ActionController::API
   end
 
   def auth_header
+    p "request.headers['Authorization']: #{request.headers['Authorization']}"
     request.headers['Authorization'] # Bearer <token>
   end
 
