@@ -25,6 +25,8 @@ For most part, code along with the [lab](https://learning.flatironschool.com/cou
 
 [ ***Please know that there are better ways to handle JWT in relation between frontend and backend, like using [HTTPOnly cookies](https://www.thegreatcodeadventure.com/jwt-storage-in-rails-the-right-way/)...*** ]
 
+----------
+
 **This is a sample application and walks through _one_ possible auth implementation. It does not cover everything there is to know about auth and is intended as an introduction. Please do not blindly copy/paste the code here. Use this as a guide for setting up auth in a React/Redux application using JSON Web Tokens.**
 
 - Second disclaimer: there are tradeoffs to every auth implementation. To secure our application further, we should set our tokens to expire and make sure our app is being served over [HTTPS](https://en.wikipedia.org/wiki/HTTPS). Furthermore, there are some [tradeoffs to storing JWTs in browser `localStorage`](https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage). [This StackOverflow post has a concise summary of the benefits/tradeoffs about where/how to store tokens client-side](https://stackoverflow.com/questions/35291573/csrf-protection-with-json-web-tokens/35347022#35347022).
