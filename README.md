@@ -11,12 +11,19 @@ v.20210521 by Jinook Jung
 - faker 2.18.0
 
 ## How to test
-- Clone the repo: `git clone https://github.com/jinook929/jwt-auth-rails`
-- Go to `jwt_auth_rails_backend` folder: `cd jwt_auth_rails_backend`
-- Execute `bundle install`
-- Set up database: `rails db:drop db:migrate db:seed`
-- Run Rails server: `rails s`
-- Go to root folder (/jwt_auth_rails : `cd ..`) and open `index.html` file (*DO NOT USE LIVE SERVER!!!*)
+For most part, code along with the [lab](https://learning.flatironschool.com/courses/2065/modules/items/134314). However, before follow along the lab, set up your evironment as below:
+### Backend
+- Clone the repo: `git clone https://github.com/jinook929/jwt-auth-rails`.
+- Go to `jwt_auth_rails_backend` folder: `cd jwt-auth-rails/jwt_auth_rails_backend`.
+- Execute `bundle install`.
+- Set up database: `rails db:drop db:migrate db:seed`.
+- Run Rails server: `rails s`.
+### Frontend
+- Open another terminal or File Explorer(PC)/finder(Mac) at (`/jwt_auth_rails`) and open `index.html` file (*DO NOT USE LIVE SERVER!!!*).
+- In you browser console, you will see 15 users set. Use the usernames and password is `hi` for all users.
+- In login status, you can access to the user's profile alert by clicking the `username`.
+
+[ ***Please know that there are better ways to handle JWT in relation between frontend and backend, like using [HTTPOnly cookies](https://www.thegreatcodeadventure.com/jwt-storage-in-rails-the-right-way/)...*** ]
 
 **This is a sample application and walks through _one_ possible auth implementation. It does not cover everything there is to know about auth and is intended as an introduction. Please do not blindly copy/paste the code here. Use this as a guide for setting up auth in a React/Redux application using JSON Web Tokens.**
 
