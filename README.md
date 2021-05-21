@@ -1,5 +1,23 @@
 # JWT Auth in Redux and Rails
 
+v.20210521 by Jinook Jung
+
+## Spec
+- Ruby 2.6.1
+- Rails 6.1.3.2
+- BCrypt 3.1.16
+- JWT 2.2.3
+- Active Model Serializers 0.10.12
+- faker 2.18.0
+
+## How to test
+- Clone the repo: `git clone https://github.com/jinook929/jwt-auth-rails`
+- Go to `jwt_auth_rails_backend` folder: `cd jwt_auth_rails_backend`
+- Execute `bundle install`
+- Set up database: `rails db:drop db:migrate db:seed`
+- Run Rails server: `rails s`
+- Go to root folder (/jwt_auth_rails : `cd ..`) and open `index.html` file (*DO NOT USE LIVE SERVER!!!*)
+
 **This is a sample application and walks through _one_ possible auth implementation. It does not cover everything there is to know about auth and is intended as an introduction. Please do not blindly copy/paste the code here. Use this as a guide for setting up auth in a React/Redux application using JSON Web Tokens.**
 
 - Second disclaimer: there are tradeoffs to every auth implementation. To secure our application further, we should set our tokens to expire and make sure our app is being served over [HTTPS](https://en.wikipedia.org/wiki/HTTPS). Furthermore, there are some [tradeoffs to storing JWTs in browser `localStorage`](https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage). [This StackOverflow post has a concise summary of the benefits/tradeoffs about where/how to store tokens client-side](https://stackoverflow.com/questions/35291573/csrf-protection-with-json-web-tokens/35347022#35347022).

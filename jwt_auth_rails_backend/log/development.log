@@ -9253,3 +9253,136 @@ Processing by Api::V1::AuthController#create as */*
 Completed 202 Accepted in 199ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1571)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180828151551)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "avatar" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180828151551"]]
+  [1m[36mTRANSACTION (9.8ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddBioToUsers (20180829004747)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "bio" varchar DEFAULT 'I love flavortown, USA'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180829004747"]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-21 19:12:22.264936"], ["updated_at", "2021-05-21 19:12:22.264936"]]
+  [1m[36mTRANSACTION (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20180828151551)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "password_digest" varchar, "avatar" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180828151551"]]
+  [1m[36mTRANSACTION (10.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddBioToUsers (20180829004747)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "bio" varchar DEFAULT 'I love flavortown, USA'[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180829004747"]]
+  [1m[36mTRANSACTION (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-05-21 19:12:32.887358"], ["updated_at", "2021-05-21 19:12:32.887358"]]
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "abc"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "abc"], ["password_digest", "$2a$12$DFOGxSIwB74HVrpJQFOtx.JJk8el2Le.0VaIUjiRmxOAitJTeRCf2"], ["avatar", "https://robohash.org/profile-pic.png?size=50x50&set=set1"], ["created_at", "2021-05-21 19:12:33.281064"], ["updated_at", "2021-05-21 19:12:33.281064"], ["bio", "No. Interestingly enough, her leaf blower picked up."]]
+  [1m[36mTRANSACTION (14.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Emma Geller"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Emma Geller"], ["password_digest", "$2a$12$.LuURX4CVpdPsljzWoPkC.nScsoEMme1uuPv4vMMvCHed2APZh1py"], ["avatar", "https://robohash.org/Stephen Waltham.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:33.495149"], ["updated_at", "2021-05-21 19:12:33.495149"], ["bio", "Pivot! Pivot! Pivot! Pivot! Pivot!"]]
+  [1m[36mTRANSACTION (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Danny"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Danny"], ["password_digest", "$2a$12$tgeTQcL3vKflnXpFQyo4cuNh6YyO.ew9Dvbe44/V.6jDt.utc6ZXa"], ["avatar", "https://robohash.org/Ben.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:33.705817"], ["updated_at", "2021-05-21 19:12:33.705817"], ["bio", "If you want to receive emails about my upcoming shows please give me money so I can buy a computer."]]
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Theodore Hannigan"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Theodore Hannigan"], ["password_digest", "$2a$12$0vKR6nLjc/AgtjQ3E.pE/e/MCTq9a0OlMxd15i7Z0KamoJaJuWaMC"], ["avatar", "https://robohash.org/Paul Stevens.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:33.913940"], ["updated_at", "2021-05-21 19:12:33.913940"], ["bio", "I can’t believe my Dad saw us having sex! He didn’t make it to one of my piano recitals, but this he sees!"]]
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Marcel"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Marcel"], ["password_digest", "$2a$12$pw.U2S4KYRaOGekvNW98aOPQERTY7E8Oa4oMpvznTlUxt2IKdGtE2"], ["avatar", "https://robohash.org/Erika.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:34.129190"], ["updated_at", "2021-05-21 19:12:34.129190"], ["bio", "A hundred million people went to see a movie about what I do. I wonder how many people would go see a movie called Jurassic Parka. No, no, no, a bunch of out-of-control jackets take over an island!"]]
+  [1m[36mTRANSACTION (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Molly"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Molly"], ["password_digest", "$2a$12$mcvI8IssLNqcxPkaq0mqQuMNvWJ9RgwywfpEwXU6ssi.qrln5fcxq"], ["avatar", "https://robohash.org/Emma Geller.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:34.336063"], ["updated_at", "2021-05-21 19:12:34.336063"], ["bio", "You can’t have S-E-X when your taking care of the B-A-B-I-E."]]
+  [1m[36mTRANSACTION (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Mr. Waltham"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Mr. Waltham"], ["password_digest", "$2a$12$dTPeieqzviUycCIZfX7OS.1KgNNKtPSVHjMMSIViyBnkJyLXSkAJm"], ["avatar", "https://robohash.org/Paul Stevens.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:34.544885"], ["updated_at", "2021-05-21 19:12:34.544885"], ["bio", "Joey doesn’t share food!"]]
+  [1m[36mTRANSACTION (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Stephen Waltham"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Stephen Waltham"], ["password_digest", "$2a$12$hr/VHoO5lSQ4YTi4SVae1ek4zlf6YSzmnJuQiPbrfpago/4IRHCe."], ["avatar", "https://robohash.org/Gary.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:34.755159"], ["updated_at", "2021-05-21 19:12:34.755159"], ["bio", "Your collective dating record reads like a who’s who of human crap."]]
+  [1m[36mTRANSACTION (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Rachel Green"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Rachel Green"], ["password_digest", "$2a$12$KsMMaOY/8TQvCTz44wI6/eDnSbXDj4/OivR07VrIEa.wlZe2VJz3."], ["avatar", "https://robohash.org/Alice Knight.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:34.963286"], ["updated_at", "2021-05-21 19:12:34.963286"], ["bio", "A hundred million people went to see a movie about what I do. I wonder how many people would go see a movie called Jurassic Parka. No, no, no, a bunch of out-of-control jackets take over an island!"]]
+  [1m[36mTRANSACTION (8.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Leonard Green"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Leonard Green"], ["password_digest", "$2a$12$mSTN9VEK2Mhq66sWSmq2iOISX46uqRC75GBgM9dGOCTOTDeYPLVni"], ["avatar", "https://robohash.org/Mona.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:35.171106"], ["updated_at", "2021-05-21 19:12:35.171106"], ["bio", "We were on a break!"]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Theodore Hannigan"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Danny"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Chandler Bing"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Chandler Bing"], ["password_digest", "$2a$12$96TiKSj8JSZm7wRRtC8rBOaMVeZZ4uq/4N7gmUeDkg0T0OH3XrxZm"], ["avatar", "https://robohash.org/Chloe.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:35.775287"], ["updated_at", "2021-05-21 19:12:35.775287"], ["bio", "SEVEN! SEVEN! SEVEN!"]]
+  [1m[36mTRANSACTION (15.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Bitsy Hannigan"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Bitsy Hannigan"], ["password_digest", "$2a$12$U6X94Y9aTepRHH5eQfODLevunNpMv3ssw/WG7.mSLKM0pWdB80456"], ["avatar", "https://robohash.org/Roy.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:35.988766"], ["updated_at", "2021-05-21 19:12:35.988766"], ["bio", "I can’t believe my Dad saw us having sex! He didn’t make it to one of my piano recitals, but this he sees!"]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Julie"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Julie"], ["password_digest", "$2a$12$dTSS3fd8sQ/U4QI.UejJkO7bld1ILitXXxyUX/N6drzdjst.EfYSO"], ["avatar", "https://robohash.org/Steve.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:36.195856"], ["updated_at", "2021-05-21 19:12:36.195856"], ["bio", "Could I BE wearing any more clothes?"]]
+  [1m[36mTRANSACTION (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER(?) LIMIT ?[0m  [["username", "Mr. Zelner"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "avatar", "created_at", "updated_at", "bio") VALUES (?, ?, ?, ?, ?, ?)[0m  [["username", "Mr. Zelner"], ["password_digest", "$2a$12$/TXmf2IWlqO57otcaoTnQ.pN94YUxhl8ZHfVZOoD84d2rntSqI1im"], ["avatar", "https://robohash.org/Mr. Treeger.png?size=150x150&set=set1"], ["created_at", "2021-05-21 19:12:36.402941"], ["updated_at", "2021-05-21 19:12:36.402941"], ["bio", "If you want to receive emails about my upcoming shows please give me money so I can buy a computer."]]
+  [1m[36mTRANSACTION (8.0ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/v1/users" for ::1 at 2021-05-21 15:12:42 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.44ms)
+Completed 200 OK in 42ms (Views: 31.8ms | ActiveRecord: 1.5ms | Allocations: 10980)
+
+
