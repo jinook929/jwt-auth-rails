@@ -9,6 +9,7 @@ v.20210521 by Jinook Jung
 - JWT 2.2.3
 - Active Model Serializers 0.10.12
 - faker 2.18.0
+- Intead of [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), this version use [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) for client-side storage.
 
 ## How to test
 For most part, code along with the [lab](https://learning.flatironschool.com/courses/2065/modules/items/134314). However, before follow along the lab, set up your evironment as below:
