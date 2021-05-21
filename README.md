@@ -21,7 +21,7 @@ For most part, code along with the [lab](https://learning.flatironschool.com/cou
 - Run Rails server: `rails s`.
 ### Frontend
 - Open another terminal or File Explorer(PC)/finder(Mac) at (`/jwt_auth_rails`) and open `index.html` file (*DO NOT USE LIVE SERVER!!!*).
-- In you browser console, you will see 15 users set. Use the usernames and password is `hi` for all users.
+- In you browser console, you will see 15 users set. Use the usernames and password is `hi` for all users (except `abc`; password = `123`).
 - In login status, you can access to the user's profile alert by clicking the `username`.
 
 [ ***Please know that there are better ways to handle JWT in relation between frontend and backend, like using [HTTPOnly cookies](https://www.thegreatcodeadventure.com/jwt-storage-in-rails-the-right-way/)...*** ]
