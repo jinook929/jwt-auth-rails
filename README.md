@@ -12,7 +12,9 @@ v.20210521 by Jinook Jung
 - Intead of [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), this version use [sessionStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage) for client-side storage.
 
 ## How to test
+
 For most part, code along with the [lab](https://learning.flatironschool.com/courses/2065/modules/items/134314). However, before follow along the lab, set up your evironment as below:
+
 ### Backend
 - Clone the repo: `git clone https://github.com/jinook929/jwt-auth-rails`.
 - Go to `jwt_auth_rails_backend` folder: `cd jwt-auth-rails/jwt_auth_rails_backend`.
@@ -22,7 +24,7 @@ For most part, code along with the [lab](https://learning.flatironschool.com/cou
 ### Frontend
 - Open another terminal or File Explorer(PC)/finder(Mac) at (`/jwt_auth_rails`) and open `index.html` file (*DO NOT USE LIVE SERVER!!!*).
 - In you browser console, you will see 15 users set. Use the usernames and password is `hi` for all users (except `abc`; password = `123`).
-- In login status, you can access to the user's profile alert by clicking the `username`.
+- In login status, you can access to the user's **profile** alert by clicking the `username` on screen (in other words, this `profile` route works because you are logged in; if you directly go to http://localhost:3000/api/v1/profile in your browser, you will see the error message).
 
 [ ***Please know that there are better ways to handle JWT in relation between frontend and backend, like using [HTTPOnly cookies](https://www.thegreatcodeadventure.com/jwt-storage-in-rails-the-right-way/)...*** ]
 
